@@ -113,13 +113,22 @@ def q11
   sports = ["サッカー", "バスケ", "野球", ["フットサル", "野球"], "水泳", "ハンドボール", ["卓球", "サッカー", "ボルダリング"]]
 
   # 以下に回答を記載
+  puts "ユーザーの趣味一覧"
 
+  #２次配列sportsを一次配列にわけて重複を消すコード
+  sports.flatten!(&:uniq)
+
+  #会員Noとそれぞれの趣味を出力するコード
+  sports.each.with_index(1) do |sport, i|
+    puts "会員No#{i} #{sport}"  
+  end
 end
 
 def q12
   data = { user: { name: "satou", age: 33 } }
 
   # 以下に回答を記載
+  puts data[:user][:name]
 
 end
 
@@ -128,6 +137,11 @@ def q13
   update_data = { age: 32, address: "沖縄" }
 
   # 以下に回答を記載
+  #user_dataにupdate_dataを追加するコード
+  user_data.merge!(update_data)
+  
+  #変更したuser_dataの出力
+  puts user_data
 
 end
 
@@ -135,6 +149,7 @@ def q14
   data = { name: "satou", age: 33, address: "saitama", hobby: "soccer", email: "hoge@fuga.com" }
 
   # 以下に回答を記載
+  
 
 end
 
