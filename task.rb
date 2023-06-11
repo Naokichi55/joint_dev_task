@@ -118,7 +118,7 @@ def q11
   #２次配列sportsを一次配列にわけて重複を消すコード
   sports.flatten!.uniq!
 
-  #会員Noとそれぞれの趣味を出力するコード
+  #Noとそれぞれの趣味を出力するコード
   sports.each.with_index(1) do |sport, i|
     puts "No#{i} #{sport}"  
   end
