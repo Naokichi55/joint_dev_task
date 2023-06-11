@@ -120,7 +120,7 @@ def q11
 
   #会員Noとそれぞれの趣味を出力するコード
   sports.each.with_index(1) do |sport, i|
-    puts "会員No#{i} #{sport}"  
+    puts "No#{i} #{sport}"  
   end
 end
 
