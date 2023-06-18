@@ -149,13 +149,10 @@ def q14
   data = { name: "satou", age: 33, address: "saitama", hobby: "soccer", email: "hoge@fuga.com" }
 
   # 以下に回答を記載
-  #空の配列の作成
-    data1 = []
-  #キーを配列にいれる
-  data.each_key do |key|
-    data1 << key
-  end
-    p data1
+  #keysメソッドを使用しキーのみを取り出した配列data1を作成
+  data1 = data.keys
+  #data1の出力
+  p data1
 end
 
 def q15
