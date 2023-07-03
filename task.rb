@@ -228,7 +228,7 @@ class UserQ18
    if @age > 10
      puts "こんにちは#{@name}と申します。よろしくお願いします。" 
     else 
-      puts "はいさいまいど〜,#{@name}です!!"
+      puts "はいさいまいど〜,#{@name}です!!!"
    end
   end
 
