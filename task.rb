@@ -189,8 +189,6 @@ end
 
 class UserQ17
   # 以下に回答を記載
-  attr_reader :name, :age, :gender
-
   def initialize(name:, age:, gender:)
     @name = name
     @age = age
@@ -198,9 +196,11 @@ class UserQ17
   end
 
   def info
-    puts "名前:#{@name}"
-    puts "年齢:#{@age}"
-    puts "性別:#{@gender}"
+    puts <<~TEXT
+     名前:#{@name}
+     年齢:#{@age}
+     性別:#{@gender}
+    TEXT
   end
 
 end
@@ -216,9 +216,7 @@ def q17
 end
 
 class UserQ18
-  # 以下に回答を記載
-  attr_reader
-  
+  # 以下に回答を記載  
   def initialize(name:, age:)
     @name = name
     @age = age
