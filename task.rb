@@ -149,10 +149,8 @@ def q14
   data = { name: "satou", age: 33, address: "saitama", hobby: "soccer", email: "hoge@fuga.com" }
 
   # 以下に回答を記載
-  #keysメソッドを使用しキーのみを取り出した配列data1を作成
-  data1 = data.keys
-  #data1の出力
-  p data1
+  
+
 end
 
 def q15
@@ -160,17 +158,7 @@ def q15
   data2 = { name: "yamada", hobby: "baseball", role: "normal" }
 
   # 以下に回答を記載
-  if data1.include?(:age)
-    puts "OK"
-  else
-    puts "NG"
-  end
-  
-  if data2.include?(:age)
-    puts "OK"
-  else
-    puts "NG"
-  end
+
 end
 
 def q16
@@ -182,13 +170,12 @@ def q16
   ]
 
   # 以下に回答を記載
-  users.each do |user|
-      puts "私の名前は#{user[:name]}です。年齢は#{user[:age]}歳です。"
-  end
+
 end
 
 class UserQ17
   # 以下に回答を記載
+
   def initialize(name:, age:, gender:)
     @name = name
     @age = age
@@ -216,6 +203,7 @@ def q17
 end
 
 class UserQ18
+
   # 以下に回答を記載  
   def initialize(name:, age:)
     @name = name
