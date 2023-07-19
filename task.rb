@@ -279,13 +279,13 @@ class Zoo
   def info_entry_fee(user)
     case user.age
     when 0..5
-      puts "#{user.name}は#{@infant}円です。"
+      puts "#{user.name}さんは#{@infant}円です。"
     when 6..12 
-      puts "#{user.name}は#{@children}円です。"
+      puts "#{user.name}さんは#{@children}円です。"
     when 13..64
-      puts "#{user.name}は#{@adult}円です。"
+      puts "#{user.name}さんは#{@adult}円です。"
     when 65..120
-      puts "#{user.name}は#{@senior}円です。"
+      puts "#{user.name}さんは#{@senior}円です。"
     end
   end
 end
