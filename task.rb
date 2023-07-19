@@ -243,8 +243,8 @@ end
 
 class Item
   # 以下を修正して下さい
-
-  def initialize(name)
+  attr_reader :name
+  def initialize(name:)
     @name = name
   end
 end
@@ -257,19 +257,43 @@ end
 
 class UserQ20
   # 以下に回答を記載
+  attr_reader :name, :age
 
+  def initialize(name:, age:)
+    @name = name
+    @age = age
+  end
 end
 
-class Zoo
-  # 以下に回答を記載
+class Zoo 
+ 
+  def initialize(params)
+    @name = params[:name]
+    @infant = params[:entry_fee][:infant]
+    @children = params[:entry_fee][:children]
+    @adult = params[:entry_fee][:adult]
+    @senior = params[:entry_fee][:senior]
+  end
 
+
+  def info_entry_fee(user)
+    case user.age
+    when 0..5
+      puts "#{user.name}は#{@infant}円です。"
+    when 6..12 
+      puts "#{user.name}は#{@children}円です。"
+    when 13..64
+      puts "#{user.name}は#{@adult}円です。"
+    when 65..120
+      puts "#{user.name}は#{@senior}円です。"
+    end
+  end
 end
-
 
 def q20
   # ここは変更しないで下さい（動物園・ユーザー情報は変更していただいてOKです）
   zoo = Zoo.new(name: "旭山動物園", entry_fee: { infant: 0, children: 400, adult: 800, senior: 500 })
-
+  
   users = [
     UserQ20.new(name: "たま", age: 3),
     UserQ20.new(name: "ゆたぼん", age: 10),
